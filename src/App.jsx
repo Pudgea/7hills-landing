@@ -10,6 +10,9 @@ import Partners from './components/Partners'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
+// Base URL for assets (works with both development and GitHub Pages)
+const BASE_URL = import.meta.env.BASE_URL || ''
+
 function App() {
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -24,14 +27,14 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar isScrolled={isScrolled} />
+      <Navbar isScrolled={isScrolled} baseUrl={BASE_URL} />
       <main>
         <Hero />
         <Services />
-        <MobileLab />
+        <MobileLab baseUrl={BASE_URL} />
         <Advantages />
         <Timeline />
-        <Partners />
+        <Partners baseUrl={BASE_URL} />
         <Contact />
       </main>
       <Footer />

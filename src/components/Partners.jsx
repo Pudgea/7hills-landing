@@ -1,15 +1,15 @@
 import React from 'react'
 
-const Partners = () => {
+const Partners = ({ baseUrl }) => {
   const partners = [
-    '/assets/partners/1.png',
-    '/assets/partners/2.png',
-    '/assets/partners/3.png',
-    '/assets/partners/4.png',
-    '/assets/partners/5.png',
-    '/assets/partners/6.png',
-    '/assets/partners/7.png',
-    '/assets/partners/8.png'
+    `${baseUrl}/assets/partners/1.png`,
+    `${baseUrl}/assets/partners/2.png`,
+    `${baseUrl}/assets/partners/3.png`,
+    `${baseUrl}/assets/partners/4.png`,
+    `${baseUrl}/assets/partners/5.png`,
+    `${baseUrl}/assets/partners/6.png`,
+    `${baseUrl}/assets/partners/7.png`,
+    `${baseUrl}/assets/partners/8.png`
   ]
 
   return (

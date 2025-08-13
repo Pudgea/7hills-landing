@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Navbar = ({ isScrolled }) => {
+const Navbar = ({ isScrolled, baseUrl }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const scrollToSection = (sectionId) => {
@@ -16,7 +16,7 @@ const Navbar = ({ isScrolled }) => {
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <img src="/assets/logo.png" className="logo" alt="7Hills Intelligence Logo" />
+      <img src={`${baseUrl}/assets/logo.png`} className="logo" alt="7Hills Intelligence Logo" />
       
       <ul className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <li><button onClick={() => scrollToSection('home')}>Главная</button></li>

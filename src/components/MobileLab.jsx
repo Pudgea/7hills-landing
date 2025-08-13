@@ -1,11 +1,11 @@
 import React from 'react'
 
-const MobileLab = () => {
+const MobileLab = ({ baseUrl }) => {
   return (
     <section id="mobile-lab" className="mobile-lab">
       <div className="mobile-lab-background">
         <video autoPlay muted loop playsInline>
-          <source src="/assets/mission-bg.mp4" type="video/mp4" />
+          <source src={`${baseUrl}/assets/mission-bg.mp4`} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="video-overlay"></div>
@@ -88,8 +88,8 @@ const MobileLab = () => {
             <h3>Презентация переносной лаборатории</h3>
             <div className="video-wrapper">
               <video controls>
-                <source src="/assets/7HI - 1 Presentation.MOV" type="video/quicktime" />
-                <source src="/assets/7HI - 1 Presentation.MOV" type="video/mp4" />
+                <source src={`${baseUrl}/assets/7HI - 1 Presentation.MOV`} type="video/quicktime" />
+                <source src={`${baseUrl}/assets/7HI - 1 Presentation.MOV`} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
