@@ -88,6 +88,7 @@ body {
     position: relative;
     cursor: pointer;
     font-size: 1rem;
+    outline: none;
 }
 
 .nav-links button:hover {
@@ -107,6 +108,14 @@ body {
 
 .nav-links button:hover::after {
     width: 100%;
+}
+
+.nav-links button:focus {
+    outline: none;
+}
+
+.nav-links button:focus-visible {
+    outline: none;
 }
 
 /* ===== MAIN CONTENT ===== */
@@ -801,12 +810,21 @@ footer {
     color: var(--primary);
     cursor: pointer;
     display: none;
+    outline: none;
 }
 
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
     }
+}
+
+.mobile-menu-btn:focus {
+    outline: none;
+}
+
+.mobile-menu-btn:focus-visible {
+    outline: none;
 }
 
 /* ===== UTILITY CLASSES ===== */
